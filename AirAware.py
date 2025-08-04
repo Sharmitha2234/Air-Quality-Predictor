@@ -10,7 +10,7 @@ import zipfile
 import urllib.request
 import os
 
-# Step 1: Download and extract
+# Step 1: Download and extract dataset
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/00360/AirQualityUCI.zip"
 zip_path = "AirQualityUCI.zip"
 csv_file = "AirQualityUCI.csv"
@@ -20,7 +20,7 @@ if not os.path.exists(csv_file):
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
         zip_ref.extractall()
 
-# Step 2: Load and clean
+# Step 2: Load and clean dataset
 df = pd.read_csv(csv_file, sep=';', decimal=',')
 df = df.drop(columns=['Date', 'Time'], errors='ignore')
 df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
