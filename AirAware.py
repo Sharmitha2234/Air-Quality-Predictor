@@ -66,7 +66,7 @@ print(f"RMSE: {rmse:.4f}")
 print(f"R² Score: {r2:.4f}")
 print(f"Accuracy-like Score: {r2 * 100:.2f}%")
 
-# Step 7: Plot
+# Step 7: Plot the graph
 plt.figure(figsize=(10,5))
 plt.plot(y_test, label='Actual' , color= 'red')
 plt.plot(y_pred, label='Predicted', color='blue')
