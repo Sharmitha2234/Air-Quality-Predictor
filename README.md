@@ -49,18 +49,3 @@ The LSTM model is trained to capture temporal dependencies in the pollutant data
 
 - Source: [UCI Air Quality Data Set](https://archive.ics.uci.edu/ml/datasets/Air+Quality)
 - Format: Time-series sensor readings for urban air pollution levels
-
----
-
-## 🚀 How to Run
-
-```bash
-# Create a virtual environment (optional)
-python -m venv env
-source env/bin/activate   # or .\env\Scripts\activate on Windows
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the predictor script
-python AirAware.py
